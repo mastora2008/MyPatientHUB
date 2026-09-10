@@ -19,12 +19,18 @@ button,
 input {
   font-family: inherit;
 }
+
+/* =========================
+   LOGIN PAGE
+========================= */
+
 .login-page {
   min-height: 100vh;
   position: relative;
   padding: 5px 12px 30px;
   background: #f6f8fa;
 }
+
 .login-page a {
   transition: all 0.3s ease;
 }
@@ -33,17 +39,18 @@ input {
   color: #a000c7;
   cursor: pointer;
 }
+
 .login-image {
   height: 365px;
   border-radius: 8px;
   background:
     linear-gradient(
       135deg,
-      rgba(63, 25, 104, .65),
-      rgba(4, 69, 105, .55),
-      rgba(145, 26, 89, .6)
+      rgba(63, 25, 104, 0.65),
+      rgba(4, 69, 105, 0.55),
+      rgba(145, 26, 89, 0.6)
     ),
-    url("MyPatientPIC.jpg") center/cover no-repeat;
+    url("MyPatientPIC.jpg") center / cover no-repeat;
 }
 
 .login {
@@ -73,7 +80,7 @@ input {
   min-height: 420px;
   padding: 24px 20px;
   border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, .12);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .login form h2 {
@@ -127,6 +134,7 @@ input {
   font-weight: bold;
   font-size: 11px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .signin {
@@ -135,6 +143,12 @@ input {
 
 .signup {
   background: linear-gradient(90deg, #27c2e9, #2676ed);
+}
+
+.signin:hover,
+.signup:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .options {
@@ -174,11 +188,18 @@ input {
   color: #8d98a8;
   font-size: 13px;
 }
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
 .dashboard {
   min-height: 100vh;
   display: flex;
   background: #f5f7fa;
 }
+
 .dashboard aside {
   width: 255px;
   min-height: 100vh;
@@ -216,6 +237,11 @@ input {
   color: #777;
 }
 
+
+/* =========================
+   NAVIGATION
+========================= */
+
 .dashboard nav {
   margin-top: 20px;
 }
@@ -231,8 +257,6 @@ input {
   color: #758195;
   font-size: 13px;
   cursor: pointer;
-}
-.dashboard nav a {
   transition: all 0.3s ease;
 }
 
@@ -259,13 +283,14 @@ input {
 .dashboard nav a.active {
   background: white;
   color: #46546b;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 .dashboard nav a.active i {
   background: linear-gradient(135deg, #db00a9, #9e00c7);
   color: white;
 }
+
 .help {
   margin-top: 25px;
   height: 70px;
@@ -278,15 +303,16 @@ input {
   font-size: 20px;
 }
 
-/* MAIN DASHBOARD CONTENT */
+
+/* =========================
+   DASHBOARD CONTENT
+========================= */
 
 .dashboard-content {
   margin-left: 255px;
   width: calc(100% - 255px);
   min-height: 100vh;
 }
-
-/* HEADER */
 
 .dashboard header {
   height: 105px;
@@ -342,9 +368,6 @@ input {
   color: #344054;
 }
 
-
-/* CONTENT */
-
 .content {
   padding: 20px 30px 0;
 }
@@ -356,136 +379,36 @@ input {
 }
 
 
-/* CARDS */
+/* =========================
+   CARDS
+========================= */
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
 }
-.cards article {
-  transition: 0.3s ease;
-}
 
-.cards article:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-}
 .cards article {
   min-height: 335px;
   background: white;
   border-radius: 15px;
   padding: 20px 15px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, .04);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
   position: relative;
-}
-.cards article li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #f0f0f0;
-    transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
-.cards article li:hover {
-    padding-left: 6px;
-    color: #9b00c7;
+.cards article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
-.cards article li b {
-    background: #f3e8ff;
-    color: #9b00c7;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-    transition: 0.3s ease;
-}
-
-.cards article li:hover b {
-    background: #9b00c7;
-    color: white;
-    transform: scale(1.08);
-}
 .cards article h3 {
   font-size: 15px;
   color: #42526b;
   margin-bottom: 20px;
 }
-
-/* CHART */
-
-.chart {
-  width: 175px;
-  height: 175px;
-  border-radius: 50%;
-  position: absolute;
-  left: 40px;
-  top: 75px;
-}
-
-.chart {
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  cursor: pointer;
-}
-
-.chart:hover {
-  transform: scale(1.06) rotate(2deg);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-.chart::after {
-  content: "";
-  position: absolute;
-  width: 105px;
-  height: 105px;
-  background: white;
-  border-radius: 50%;
-  left: 35px;
-  top: 35px;
-}
-
-
-/* CLINIC CHART */
-
-.clinic {
-  background: conic-gradient(
-    #ec008c 0deg 120deg,
-    #27366f 120deg 145deg,
-    #ffc72c 145deg 205deg,
-    #16b849 205deg 335deg,
-    #263878 335deg 360deg
-  );
-}
-
-
-/* PHARMACY CHART */
-
-.pharmacy {
-  background: conic-gradient(
-    #2855e8 0deg 100deg,
-    #a8b8dc 100deg 175deg,
-    #ec008c 175deg 210deg,
-    #16ae45 210deg 270deg,
-    #303667 270deg 360deg
-  );
-}
-
-
-/* MARKET CHART */
-
-.market {
-  background: conic-gradient(
-    #303867 0deg 90deg,
-    #aab9d6 90deg 180deg,
-    #13b94c 180deg 230deg,
-    #e5009b 230deg 300deg,
-    #2c58e7 300deg 360deg
-  );
-}
-
-
-/* CARD LIST */
 
 .cards article ul {
   list-style: none;
@@ -500,13 +423,31 @@ input {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+  padding: 10px 0;
   font-size: 12px;
   color: #596579;
+  transition: 0.3s ease;
+}
+
+.cards article li:hover {
+  padding-left: 6px;
+  color: #9b00c7;
 }
 
 .cards article li b {
+  background: #f3e8ff;
+  color: #9b00c7;
+  padding: 5px 10px;
+  border-radius: 20px;
   font-size: 11px;
-  color: #7d8795;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.cards article li:hover b {
+  background: #9b00c7;
+  color: white;
+  transform: scale(1.08);
 }
 
 .cards article > button {
@@ -522,20 +463,89 @@ input {
   font-size: 10px;
   font-weight: bold;
   cursor: pointer;
-}
-.cards article > button,
-.signin,
-.signup {
   transition: all 0.3s ease;
 }
 
-.cards article > button:hover,
-.signin:hover,
-.signup:hover {
+.cards article > button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   CHARTS
+========================= */
+
+.chart {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  position: absolute;
+  left: 40px;
+  top: 75px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
   cursor: pointer;
 }
+
+.chart:hover {
+  transform: scale(1.06) rotate(2deg);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.chart::after {
+  content: "";
+  position: absolute;
+  width: 105px;
+  height: 105px;
+  background: white;
+  border-radius: 50%;
+  left: 35px;
+  top: 35px;
+}
+
+
+/* Clinic Chart */
+
+.clinic {
+  background: conic-gradient(
+    #ec008c 0deg 120deg,
+    #27366f 120deg 145deg,
+    #ffc72c 145deg 205deg,
+    #16b849 205deg 335deg,
+    #263878 335deg 360deg
+  );
+}
+
+
+/* Pharmacy Chart */
+.pharmacy {
+  background: conic-gradient(
+    #2855e8 0deg 100deg,
+    #a8b8dc 100deg 175deg,
+    #ec008c 175deg 210deg,
+    #16ae45 210deg 270deg,
+    #303667 270deg 360deg
+  );
+}
+
+
+/* Market Chart */
+
+.market {
+  background: conic-gradient(
+    #303867 0deg 90deg,
+    #aab9d6 90deg 180deg,
+    #13b94c 180deg 230deg,
+    #e5009b 230deg 300deg,
+    #2c58e7 300deg 360deg
+  );
+}
+
+
+/* =========================
+   HEALTH
+========================= */
+
 .health h2 {
   font-size: 21px;
 }
@@ -556,7 +566,10 @@ input {
   transform: skewY(-3deg);
 }
 
-/* APPOINTMENTS */
+
+/* =========================
+   APPOINTMENTS
+========================= */
 
 .appointments {
   margin-top: 18px;
@@ -591,6 +604,7 @@ input {
   border-top: 1px solid #edf0f3;
   padding-top: 12px;
 }
+
 .doctor > i {
   width: 38px;
   height: 38px;
@@ -621,7 +635,10 @@ input {
   font-size: 12px;
 }
 
-/* DASHBOARD FOOTER */
+
+/* =========================
+   DASHBOARD FOOTER
+========================= */
 
 .dashboard-content > footer {
   min-height: 80px;
@@ -632,6 +649,7 @@ input {
   color: #8b95a5;
   font-size: 12px;
 }
+
 .dashboard-content > footer a {
   transition: all 0.3s ease;
 }
@@ -640,10 +658,17 @@ input {
   color: #a000c7;
   cursor: pointer;
 }
+
 .dashboard-content > footer div {
   display: flex;
   gap: 35px;
 }
+
+
+/* =========================
+   LOGOUT
+========================= */
+
 .logout {
   display: none;
   min-height: 100vh;
@@ -658,7 +683,7 @@ input {
   text-align: center;
   padding: 50px 30px;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .logout i {
@@ -687,6 +712,11 @@ input {
   font-weight: bold;
 }
 
+
+/* =========================
+   RESPONSIVE
+========================= */
+
 @media (max-width: 1000px) {
 
   .dashboard aside {
@@ -713,7 +743,6 @@ input {
     left: 30px;
     top: 30px;
   }
-
 }
 
 
@@ -773,8 +802,7 @@ input {
   .login form {
     width: 100%;
   }
-
-  .login > h1 {
+.login > h1 {
     font-size: 27px;
   }
 
