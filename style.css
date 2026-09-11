@@ -1,3 +1,4 @@
+css codes:
 * {
   margin: 0;
   padding: 0;
@@ -20,9 +21,8 @@ input {
   font-family: inherit;
 }
 
-/* =========================
-   LOGIN PAGE
-========================= */
+
+/* LOGIN */
 
 .login-page {
   min-height: 100vh;
@@ -31,11 +31,13 @@ input {
   background: #f6f8fa;
 }
 
-.login-page a {
+.login-page a,
+.dashboard-content > footer a {
   transition: all 0.3s ease;
 }
 
-.login-page a:hover {
+.login-page a:hover,
+.dashboard-content > footer a:hover {
   color: #a000c7;
   cursor: pointer;
 }
@@ -46,11 +48,11 @@ input {
   background:
     linear-gradient(
       135deg,
-      rgba(63, 25, 104, 0.65),
-      rgba(4, 69, 105, 0.55),
-      rgba(145, 26, 89, 0.6)
+      rgba(63, 25, 104, .65),
+      rgba(4, 69, 105, .55),
+      rgba(145, 26, 89, .6)
     ),
-    url("MyPatientPIC.jpg") center / cover no-repeat;
+    url("background img.jpeg") center/cover no-repeat;
 }
 
 .login {
@@ -74,13 +76,13 @@ input {
 }
 
 .login form {
-  background: white;
-  color: #344054;
   width: 375px;
   min-height: 420px;
   padding: 24px 20px;
+  background: white;
+  color: #344054;
   border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .12);
 }
 
 .login form h2 {
@@ -113,10 +115,10 @@ input {
 .login form > input {
   width: 100%;
   height: 36px;
-  border: 1px solid #d8dde3;
-  border-radius: 7px;
   padding: 0 12px;
   margin-bottom: 12px;
+  border: 1px solid #d8dde3;
+  border-radius: 7px;
   outline: none;
 }
 
@@ -190,9 +192,7 @@ input {
 }
 
 
-/* =========================
-   DASHBOARD
-========================= */
+/* DASHBOARD */
 
 .dashboard {
   min-height: 100vh;
@@ -203,13 +203,13 @@ input {
 .dashboard aside {
   width: 255px;
   min-height: 100vh;
-  background: white;
-  border-right: 1px solid #e6e9ee;
-  padding: 28px 20px;
   position: fixed;
   left: 0;
   top: 0;
   bottom: 0;
+  padding: 28px 20px;
+  background: white;
+  border-right: 1px solid #e6e9ee;
   overflow-y: auto;
 }
 
@@ -237,11 +237,6 @@ input {
   color: #777;
 }
 
-
-/* =========================
-   NAVIGATION
-========================= */
-
 .dashboard nav {
   margin-top: 20px;
 }
@@ -266,7 +261,8 @@ input {
   transform: translateX(4px);
 }
 
-.dashboard nav a:hover i {
+.dashboard nav a:hover i,
+.dashboard nav a.active i {
   background: linear-gradient(135deg, #db00a9, #9e00c7);
   color: white;
 }
@@ -283,30 +279,23 @@ input {
 .dashboard nav a.active {
   background: white;
   color: #46546b;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-}
-
-.dashboard nav a.active i {
-  background: linear-gradient(135deg, #db00a9, #9e00c7);
-  color: white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
 }
 
 .help {
   margin-top: 25px;
   height: 70px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #e300b0, #a000c8);
+  padding-left: 18px;
   display: flex;
   align-items: center;
-  padding-left: 18px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #e300b0, #a000c8);
   color: white;
   font-size: 20px;
 }
 
 
-/* =========================
-   DASHBOARD CONTENT
-========================= */
+/* MAIN CONTENT */
 
 .dashboard-content {
   margin-left: 255px;
@@ -316,11 +305,11 @@ input {
 
 .dashboard header {
   height: 105px;
-  background: white;
-  border-bottom: 1px solid #e9edf2;
+  padding: 0 35px;
   display: flex;
   align-items: center;
-  padding: 0 35px;
+  background: white;
+  border-bottom: 1px solid #e9edf2;
 }
 
 .dashboard header > div:first-child {
@@ -352,9 +341,9 @@ input {
 .top input {
   width: 190px;
   height: 38px;
+  padding: 0 15px;
   border: 1px solid #dfe4ea;
   border-radius: 9px;
-  padding: 0 15px;
   outline: none;
 }
 
@@ -365,23 +354,20 @@ input {
 }
 
 .top > i {
-  color: #344054;
-}
+  color: #344054;}
 
 .content {
   padding: 20px 30px 0;
 }
 
 .content > h1 {
-  font-size: 25px;
   margin-bottom: 25px;
+  font-size: 25px;
   color: #344054;
 }
 
 
-/* =========================
-   CARDS
-========================= */
+/* CARDS */
 
 .cards {
   display: grid;
@@ -391,41 +377,103 @@ input {
 
 .cards article {
   min-height: 335px;
+  position: relative;
+  padding: 20px 15px;
   background: white;
   border-radius: 15px;
-  padding: 20px 15px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
-  position: relative;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, .04);
   transition: 0.3s ease;
 }
 
 .cards article:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
 .cards article h3 {
+  margin-bottom: 20px;
   font-size: 15px;
   color: #42526b;
-  margin-bottom: 20px;
 }
+
+
+/* CHART */
+
+.chart {
+  width: 175px;
+  height: 175px;
+  position: absolute;
+  left: 40px;
+  top: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.chart:hover {
+  transform: scale(1.06) rotate(2deg);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.chart::after {
+  content: "";
+  width: 105px;
+  height: 105px;
+  position: absolute;
+  left: 35px;
+  top: 35px;
+  background: white;
+  border-radius: 50%;
+}
+
+.clinic {
+  background: conic-gradient(
+    #ec008c 0deg 120deg,
+    #27366f 120deg 145deg,
+    #ffc72c 145deg 205deg,
+    #16b849 205deg 335deg,
+    #263878 335deg 360deg
+  );
+}
+
+.pharmacy {
+  background: conic-gradient(
+    #2855e8 0deg 100deg,
+    #a8b8dc 100deg 175deg,
+    #ec008c 175deg 210deg,
+    #16ae45 210deg 270deg,
+    #303667 270deg 360deg
+  );
+}
+
+.market {
+  background: conic-gradient(
+    #303867 0deg 90deg,
+    #aab9d6 90deg 180deg,
+    #13b94c 180deg 230deg,
+    #e5009b 230deg 300deg,
+    #2c58e7 300deg 360deg
+  );
+}
+
+
+/* CARD LIST */
 
 .cards article ul {
   list-style: none;
-  margin-left: 260px;
-  margin-top: 10px;
+  margin: 10px 0 0 260px;
 }
 
 .cards article li {
   min-height: 52px;
-  border-bottom: 1px solid #edf0f3;
+  padding: 10px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  padding: 10px 0;
-  font-size: 12px;
+  border-bottom: 1px solid #edf0f3;
   color: #596579;
+  font-size: 12px;
   transition: 0.3s ease;
 }
 
@@ -435,9 +483,9 @@ input {
 }
 
 .cards article li b {
+  padding: 5px 10px;
   background: #f3e8ff;
   color: #9b00c7;
-  padding: 5px 10px;
   border-radius: 20px;
   font-size: 11px;
   font-weight: 600;
@@ -450,12 +498,15 @@ input {
   transform: scale(1.08);
 }
 
+
+/* CARD BUTTON */
+
 .cards article > button {
+  width: 145px;
+  height: 37px;
   position: absolute;
   left: 60px;
   bottom: 25px;
-  width: 145px;
-  height: 37px;
   border: none;
   border-radius: 8px;
   background: #a9bada;
@@ -472,84 +523,11 @@ input {
 }
 
 
-/* =========================
-   CHARTS
-========================= */
-
-.chart {
-  width: 175px;
-  height: 175px;
-  border-radius: 50%;
-  position: absolute;
-  left: 40px;
-  top: 75px;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  cursor: pointer;
-}
-
-.chart:hover {
-  transform: scale(1.06) rotate(2deg);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-.chart::after {
-  content: "";
-  position: absolute;
-  width: 105px;
-  height: 105px;
-  background: white;
-  border-radius: 50%;
-  left: 35px;
-  top: 35px;
-}
-
-
-/* Clinic Chart */
-
-.clinic {
-  background: conic-gradient(
-    #ec008c 0deg 120deg,
-    #27366f 120deg 145deg,
-    #ffc72c 145deg 205deg,
-    #16b849 205deg 335deg,
-    #263878 335deg 360deg
-  );
-}
-
-
-/* Pharmacy Chart */
-.pharmacy {
-  background: conic-gradient(
-    #2855e8 0deg 100deg,
-    #a8b8dc 100deg 175deg,
-    #ec008c 175deg 210deg,
-    #16ae45 210deg 270deg,
-    #303667 270deg 360deg
-  );
-}
-
-
-/* Market Chart */
-
-.market {
-  background: conic-gradient(
-    #303867 0deg 90deg,
-    #aab9d6 90deg 180deg,
-    #13b94c 180deg 230deg,
-    #e5009b 230deg 300deg,
-    #2c58e7 300deg 360deg
-  );
-}
-
-
-/* =========================
-   HEALTH
-========================= */
+/* HEALTH */
 
 .health h2 {
   font-size: 21px;
 }
-
 .health h2 small {
   color: #63b536;
   font-size: 11px;
@@ -567,15 +545,13 @@ input {
 }
 
 
-/* =========================
-   APPOINTMENTS
-========================= */
+/* APPOINTMENTS */
 
 .appointments {
   margin-top: 18px;
+  padding: 20px;
   background: white;
   border-radius: 15px;
-  padding: 20px;
 }
 
 .appointments > div:first-child {
@@ -597,22 +573,22 @@ input {
 
 .doctor {
   min-height: 60px;
+  padding-top: 12px;
   display: grid;
   grid-template-columns: 45px 1fr 120px 80px;
   align-items: center;
   gap: 10px;
   border-top: 1px solid #edf0f3;
-  padding-top: 12px;
 }
 
 .doctor > i {
   width: 38px;
   height: 38px;
-  background: #f2f4f8;
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #f2f4f8;
+  border-radius: 50%;
   color: #60708b;
 }
 
@@ -636,9 +612,7 @@ input {
 }
 
 
-/* =========================
-   DASHBOARD FOOTER
-========================= */
+/* FOOTER */
 
 .dashboard-content > footer {
   min-height: 80px;
@@ -650,75 +624,15 @@ input {
   font-size: 12px;
 }
 
-.dashboard-content > footer a {
-  transition: all 0.3s ease;
-}
-
-.dashboard-content > footer a:hover {
-  color: #a000c7;
-  cursor: pointer;
-}
-
 .dashboard-content > footer div {
   display: flex;
   gap: 35px;
 }
 
 
-/* =========================
-   LOGOUT
-========================= */
-
-.logout {
-  display: none;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  background: #f5f7fa;
-}
-
-.logout section {
-  background: white;
-  width: 420px;
-  text-align: center;
-  padding: 50px 30px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-.logout i {
-  font-size: 60px;
-  color: #20b85a;
-  margin-bottom: 20px;
-}
-
-.logout h1 {
-  font-size: 25px;
-  margin-bottom: 10px;
-}
-
-.logout p {
-  color: #8b95a5;
-  margin-bottom: 25px;
-}
-
-.logout a {
-  display: inline-block;
-  padding: 12px 25px;
-  border-radius: 7px;
-  background: linear-gradient(90deg, #ec008c, #9d00c7);
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE */
 
 @media (max-width: 1000px) {
-
   .dashboard aside {
     width: 210px;
   }
@@ -745,9 +659,7 @@ input {
   }
 }
 
-
 @media (max-width: 800px) {
-
   .dashboard aside {
     position: relative;
     width: 70px;
@@ -792,9 +704,7 @@ input {
   }
 }
 
-
 @media (max-width: 600px) {
-
   .login {
     width: 90%;
   }
@@ -802,11 +712,13 @@ input {
   .login form {
     width: 100%;
   }
-.login > h1 {
+
+  .login > h1 {
     font-size: 27px;
   }
 
   .login-page > footer {
+    width: 90%;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
