@@ -1,5 +1,4 @@
 // Sidebar
-
 const menu = document.querySelector(".fa-bars");
 const sidebar = document.querySelector(".dashboard aside");
 const content = document.querySelector(".dashboard-content");
