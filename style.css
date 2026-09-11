@@ -20,7 +20,6 @@ input {
   font-family: inherit;
 }
 
-
 /* LOGIN */
 
 .login-page {
@@ -59,9 +58,7 @@ input {
   top: 95px;
   left: 50%;
   transform: translateX(-50%);
-  width: 375px;
-  text-align: center;
-  color: white;
+  width: min(375px, 90%);
 }
 
 .login > h1 {
@@ -75,7 +72,7 @@ input {
 }
 
 .login form {
-  width: 375px;
+  width: 100%;
   min-height: 420px;
   padding: 24px 20px;
   background: white;
@@ -190,7 +187,6 @@ input {
   font-size: 13px;
 }
 
-
 /* DASHBOARD */
 
 .dashboard {
@@ -294,7 +290,6 @@ input {
   font-size: 20px;
 }
 
-
 /* MAIN CONTENT */
 
 .dashboard-content {
@@ -366,11 +361,10 @@ input {
   color: #344054;
 }
 
-
 /* CARDS */
 
 .cards {
-  display: grid;
+  display:grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
 }
@@ -395,7 +389,6 @@ input {
   font-size: 15px;
   color: #42526b;
 }
-
 
 /* CHART */
 
@@ -455,7 +448,6 @@ input {
     #2c58e7 300deg 360deg
   );
 }
-
 
 /* CARD LIST */
 
@@ -519,6 +511,7 @@ input {
 
 .cards article > button:hover {
   transform: translateY(-2px);
+  background-color:#9b00c7 ;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
@@ -533,6 +526,8 @@ input {
   color: #63b536;
   font-size: 11px;
 }
+
+/* Creates a curved and slightly tilted decorative line near the bottom */
 
 .line {
   position: absolute;
@@ -612,7 +607,6 @@ input {
   font-size: 12px;
 }
 
-
 /* FOOTER */
 
 .dashboard-content > footer {
@@ -630,17 +624,28 @@ input {
   gap: 35px;
 }
 
+/* RESPONSIVE */
 
 /* RESPONSIVE */
 
-@media (max-width: 1000px) {
+/* LAPTOP */
+@media (max-width: 1200px) {
+
   .dashboard aside {
-    width: 210px;
+    width: 220px;
   }
 
   .dashboard-content {
-    margin-left: 210px;
-    width: calc(100% - 210px);
+    margin-left: 220px;
+    width: calc(100% - 220px);
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr;
   }
 
   .cards article ul {
@@ -650,6 +655,7 @@ input {
   .chart {
     width: 145px;
     height: 145px;
+    left: 30px;
   }
 
   .chart::after {
@@ -660,73 +666,171 @@ input {
   }
 }
 
-@media (max-width: 800px) {
+
+/* TABLET */
+@media (max-width: 900px) {
+
+  /* Sidebar becomes smaller */
   .dashboard aside {
-    position: relative;
     width: 70px;
     padding: 20px 10px;
   }
 
   .dashboard-content {
-    margin-left: 0;
+    margin-left: 70px;
     width: calc(100% - 70px);
   }
 
-  .logo span,
-  .dashboard nav a {
-    font-size: 0;
+  /* Hide the text in the sidebar */
+  .logo span {
+    display: none;
+  }
+
+  .logo {
+    justify-content: center;
+    padding: 5px 0 20px;
   }
 
   .dashboard nav a {
     justify-content: center;
     padding: 0;
+    font-size: 0;
   }
 
   .dashboard nav a i {
     font-size: 14px;
   }
 
-  .logo {
+  .help {
     justify-content: center;
     padding-left: 0;
-    padding-right: 0;
   }
 
+  /* Header */
+  .dashboard header {
+    padding: 0 20px;
+  }
+
+  .top {
+    gap: 10px;
+  }
+
+  .top input {
+    width: 140px;
+  }
+
+  /* Cards become one column */
   .cards {
     grid-template-columns: 1fr;
   }
 
-  .top input {
-    width: 120px;
+  /*
+    Chart is no longer absolutely positioned.
+    This allows the card to adjust to the screen size.
+  */
+  .chart {
+    position: relative;
+    left: auto;
+    top: auto;
+    margin: 10px auto 20px;
+    width: 150px;
+    height: 150px;
   }
 
-  .login-page > footer {
-    width: 90%;
+  .chart::after {
+    width: 90px;
+    height: 90px;
+    left: 30px;
+    top: 30px;
+  }
+
+  /* List uses the full card width */
+  .cards article ul {
+    margin: 10px 0 20px;
+  }
+
+  /* Button no longer has a fixed position */
+  .cards article > button {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    margin-top: 10px;
+  }
+
+  /* Appointments */
+  .doctor {
+    grid-template-columns: 45px 1fr 90px 60px;
   }
 }
 
+
+/* MOBILE */
 @media (max-width: 600px) {
-  .login {
-    width: 90%;
+
+  /* Dashboard */
+  .dashboard {
+    display: block;
   }
 
-  .login form {
+  /* Sidebar becomes a top navigation bar */
+  .dashboard aside {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    height: auto;
+    padding: 10px;
+    display: block;
+    overflow: hidden;
+  }
+
+  .dashboard-content {
+    margin-left: 0;
     width: 100%;
   }
 
-  .login > h1 {
-    font-size: 27px;
-  }
-
-  .login-page > footer {
-    width: 90%;
-    flex-wrap: wrap;
+  /* Logo */
+  .logo {
     justify-content: center;
-    gap: 15px;
+    padding: 5px 0 10px;
+    border-bottom: none;
   }
 
+  .logo span {
+    display: inline;
+  }
+
+  /* Navigation can scroll horizontally */
+  .dashboard nav {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+  }
+
+  .dashboard nav a {
+    flex-shrink: 0;
+    width: 45px;
+    height: 40px;
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 0;
+  }
+
+  .dashboard nav a i {
+    font-size: 14px;
+  }
+
+  /* Help button */
+  .help {
+    display: none;
+  }
+
+  /* Header */
   .dashboard header {
-    padding: 0 15px;
+    height: auto;
+    min-height: 75px;
+    padding: 15px;
   }
 
   .dashboard header > div:first-child {
@@ -738,27 +842,54 @@ input {
   }
 
   .top {
+    margin-left: auto;
     gap: 10px;
   }
 
   .top input {
-    width: 100px;
+    width: 110px;
+    height: 35px;
   }
 
+  .top a {
+    font-size: 0;
+  }
+
+  .top a i {
+    font-size: 17px;
+  }
+
+  .top > i {
+    font-size: 15px;
+  }
+
+  /* Main content */
   .content {
     padding: 15px;
   }
 
+  .content > h1 {
+    font-size: 21px;
+    margin-bottom: 18px;
+  }
+
+  /* Cards */
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
   .cards article {
-    overflow: hidden;
+    min-height: auto;
+    padding: 18px 15px;
   }
 
-  .cards article ul {
-    margin-left: 170px;
-  }
-
+  /* Chart */
   .chart {
-    left: 20px;
+    position: relative;
+    left: auto;
+    top: auto;
+    margin: 15px auto;
     width: 125px;
     height: 125px;
   }
@@ -770,16 +901,157 @@ input {
     top: 25px;
   }
 
+  /* List */
+  .cards article ul {
+    margin: 10px 0 15px;
+  }
+
+  .cards article li {
+    font-size: 11px;
+  }
+
+  /* Button */
+  .cards article > button {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    width: 145px;
+    margin-top: 5px;
+  }
+
+  /* Health line */
+  .line {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    height: 70px;
+    margin-top: 20px;
+  }
+
+  /* Appointments */
+  .appointments {
+    padding: 15px;
+  }
+
+  .appointments > div:first-child {
+    gap: 10px;
+  }
+
   .doctor {
     grid-template-columns: 40px 1fr;
+    gap: 10px;
   }
 
   .doctor > b {
     display: none;
   }
 
+  /* Footer */
   .dashboard-content > footer {
     flex-direction: column;
     gap: 15px;
+    text-align: center;
+    padding: 20px 15px;
   }
+
+  .dashboard-content > footer div {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+
+  /* LOGIN */
+  .login-page {
+    padding: 5px 10px 30px;
+  }
+
+  .login-image {
+    height: 300px;
+  }
+
+  .login {
+    top: 70px;
+    width: 90%;
+  }
+
+  .login > h1 {
+    font-size: 27px;
+  }
+
+  .login > p {
+    font-size: 12px;
+  }
+
+  .login form {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .login-page > footer {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    margin-top: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+  }
+}
+
+
+/* SMALL MOBILE */
+@media (max-width: 600px) {
+
+  .dashboard {
+    display: block;
+  }
+
+  .dashboard aside {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    height: auto;
+  }
+
+  .dashboard-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .content {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .cards article {
+    width: 100%;
+    min-height: auto;
+    padding: 18px 15px;
+  }
+
+  .chart {
+    position: relative;
+    left: auto;
+    top: auto;
+    margin: 15px auto;
+    width: 125px;
+    height: 125px;
+  }
+
+  .cards article ul {
+    margin: 10px 0 15px;
+  }
+
 }
