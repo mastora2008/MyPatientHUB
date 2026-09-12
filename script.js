@@ -16,14 +16,11 @@ if (menu && sidebar) {
             content.style.marginLeft = "0";
             content.style.width = "100%";
         }
-
     });
 
 }
 
-
 // Login validation
-
 const form = document.querySelector(".login form");
 
 if (form) {
