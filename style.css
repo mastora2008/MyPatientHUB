@@ -161,6 +161,10 @@ input {
   color: #8993a4;
 }
 
+.or{
+  text-align: center;
+}
+
 .options label {
   display: flex;
   align-items: center;
