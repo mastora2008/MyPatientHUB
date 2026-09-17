@@ -3,82 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MyPatientHUB</title>
+  <title>MyPatientHUB - Dashboard</title>
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-<main class="login-page">
-  <div class="login-image"></div>
-
-  <section class="login">
-    <h1>Welcome to MyPatientHUB!</h1>
-    <p>We provide smart healthcare services in your hands.</p>
-
-    <form>
-      <h2>Sign in to MyPatientHUB</h2>
-
-      <div class="social">
-        <button><i class="fa-brands fa-facebook-f"></i></button>
-        <button><i class="fa-brands fa-google"></i></button>
-      </div>
-
-      <input type="email" placeholder="Email or Phone number">
-      <input type="password" placeholder="Please enter your password">
-
-      <button class="signin">SIGN IN</button>
-
-      <div class="options">
-        <a href="#">Forgot password?</a>
-        <label><input type="checkbox"> Remember me</label>
-      </div>
-
-      <div class="or">or</div>
-
-      <button class="signup">SIGN UP</button>
-    </form>
-  </section>
-
-  <footer>
-    <a href="#">Google Play Store APP</a>
-    <a href="#">App Store APP</a>
-    <a href="#">About MyPatientHUB</a>
-    <a href="#">About Us</a>
-    <a href="#">Our Blog</a>
-  </footer>
-</main>
-
-
 <main class="dashboard">
 
   <aside>
+
     <div class="logo">
       <b>M</b>
-      <span>MyPatientHUB<br><small>For better healthcare</small></span>
+
+      <span>
+        MyPatientHUB<br>
+        <small>For better healthcare</small>
+      </span>
     </div>
 
     <nav>
-      <a class="active"><i class="fa-solid fa-table-columns"></i>Dashboard</a>
-      <a><i class="fa-solid fa-calendar-days"></i>Appointments</a>
-      <a><i class="fa-solid fa-user-doctor"></i>Find Doctor</a>
-      <a><i class="fa-solid fa-hospital"></i>Find Clinic</a>
-      <a><i class="fa-solid fa-comments"></i>Chat</a>
-      <a><i class="fa-solid fa-store"></i>Find MarketPlace</a>
-      <a><i class="fa-solid fa-pills"></i>Find Pharmacy</a>
-      <a><i class="fa-solid fa-clipboard-list"></i>My Dependents</a>
-      <a><i class="fa-solid fa-user-gear"></i>My Account</a>
-      <a><i class="fa-solid fa-screwdriver-wrench"></i>Settings</a>
+
+      <a class="active">
+        <i class="fa-solid fa-table-columns"></i>
+        Dashboard
+      </a>
+
+      <a>
+        <i class="fa-solid fa-calendar-days"></i>
+        Appointments
+      </a>
+
+      <a>
+        <i class="fa-solid fa-user-doctor"></i>
+        Find Doctor
+      </a>
+
+      <a>
+        <i class="fa-solid fa-hospital"></i>
+        Find Clinic
+      </a>
+
+      <a>
+        <i class="fa-solid fa-comments"></i>
+        Chat
+      </a>
+
+      <a>
+        <i class="fa-solid fa-store"></i>
+        Find MarketPlace
+      </a>
+
+      <a>
+        <i class="fa-solid fa-pills"></i>
+        Find Pharmacy
+      </a>
+
+      <a>
+        <i class="fa-solid fa-clipboard-list"></i>
+        My Dependents
+      </a>
+
+      <a>
+        <i class="fa-solid fa-user-gear"></i>
+        My Account
+      </a>
+
+      <a>
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+        Settings
+      </a>
+
     </nav>
 
-    <div class="help"><i class="fa-solid fa-question"></i></div>
+    <div class="help">
+      <i class="fa-solid fa-question"></i>
+    </div>
+
   </aside>
 
 
   <section class="dashboard-content">
 
     <header>
+
       <div>
         <small>⌂　/　Dashboard</small>
         <h3>Dashboard</h3>
@@ -87,11 +97,20 @@
       <i class="fa-solid fa-bars"></i>
 
       <div class="top">
+
         <input type="search" placeholder="Type here...">
-        <a><i class="fa-solid fa-circle-user"></i> Log out</a>
+
+        <a href="login.html">
+          <i class="fa-solid fa-circle-user"></i>
+          Log out
+        </a>
+
         <i class="fa-solid fa-gear"></i>
+
         <i class="fa-solid fa-bell"></i>
+
       </div>
+
     </header>
 
 
@@ -99,9 +118,11 @@
 
       <h1>Welcome To MyPatientHUB!</h1>
 
+
       <div class="cards">
 
         <article>
+
           <h3>Promotion by Clinics　ⓘ</h3>
 
           <div class="chart clinic"></div>
@@ -115,10 +136,12 @@
           </ul>
 
           <button>MORE DETAILS</button>
+
         </article>
 
 
         <article>
+
           <h3>Promotion by Pharmacies　ⓘ</h3>
 
           <div class="chart pharmacy"></div>
@@ -132,10 +155,12 @@
           </ul>
 
           <button>MORE DETAILS</button>
+
         </article>
 
 
         <article>
+
           <h3>Smart Market Usage by app　ⓘ</h3>
 
           <div class="chart market"></div>
@@ -148,56 +173,67 @@
           </ul>
 
           <button>MORE DETAILS</button>
+
         </article>
 
 
         <article class="health">
+
           <h3>Health index　ⓘ</h3>
+
           <h2>70% <small>+3%</small></h2>
+
           <div class="line"></div>
+
         </article>
 
       </div>
 
 
       <section class="appointments">
+
         <div>
           <h2>Upcoming Appointments</h2>
           <a>View All</a>
         </div>
 
         <div class="doctor">
+
           <i class="fa-solid fa-user-doctor"></i>
-          <span><b>Dr Afiah</b><small>Cardiologist</small></span>
+
+          <span>
+            <b>Dr Afiah</b>
+            <small>Cardiologist</small>
+          </span>
+
           <b>RM 400</b>
+
           <b>40%</b>
+
         </div>
+
       </section>
 
     </div>
 
 
     <footer>
+
       <p>© 2026, made with ♥ by MyPiHUB for a better web.</p>
+
       <div>
         <a>MyPatientHUB</a>
         <a>About Us</a>
         <a>Blog</a>
       </div>
+
     </footer>
 
   </section>
+
 </main>
 
-
-<main class="logout">
-  <section>
-    <i class="fa-solid fa-circle-check"></i>
-    <h1>You have been logged out</h1>
-    <p>Thank you for using MyPatientHUB.</p>
-    <a href="#">SIGN IN AGAIN</a>
-  </section>
-</main>
+<script src="script.js"></script>
 
 </body>
 </html>
