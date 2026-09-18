@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPatientHUB - Find Clinic</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+<main class="dashboard">
+
+<!-- Sidebar -->
+ <aside>
+    <div class="logo">
+        <b>M</b>
+        <span>
+            MyPatientHUB<br>
+            <small>For better healthcare</small>
+        </span>
+        </div>
+        
+        <nav>
+            <a href="index.html">
+                <i class="fa-solid fa-table-columns"></i>
+                Dashboard
+            </a>
+
+            <a>
+                <i class="fa-solid fa-calendar-days"></i>
+                Appointments
+            </a>
+
+            <a href="find-doctor.html">
+                <i class="fa-solid fa-user-doctor"></i>
+                Find Doctor
+            </a>
+
+            <a class="active">
+                <i class="fa-solid fa-hospital"></i>
+                Find Clinic
+            </a>
+
+            <a>
+                <i class="fa-solid fa-comments"></i>
+                Chat
+            </a>
+
+            <a>
+                <i class="fa-solid fa-store"></i>
+                Find MarketPlace
+            </a>
+
+            <a>
+                <i class="fa-solid fa-pills"></i>
+                Find Pharmacy
+            </a>
+
+            <a>
+                <i class="fa-solid fa-clipboard-list"></i>
+                My Dependents
+            </a>
+
+            <a>
+                <i class="fa-solid fa-user-gear"></i>
+                My Account
+            </a>
+
+            <a>
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                Settings
+            </a>
+
+        </nav>
+
+        <div class="help">
+            <i class="fa-solid fa-question"></i>
+        </div>
+    </aside>
+
+<section class="dashboard-content">
+    <!-- Header -->
+     <header>
+
+        <div>
+            <small>
+                <i class="fa-solid fa-house"></i>
+                / Findhospital
+            </small>
+
+            <h3>Findhospital</h3>
+
+        </div>
+
+        <i class="fa-solid fa-bars"></i>
+        
+        <div class="top">
+            
+            <div class="top-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" placeholder="Type here...">
+            </div>
+            
+            <a href="login.html">
+                <i class="fa-solid fa-circle-user"></i>
+                Log out
+            </a>
+
+            <i class="fa-solid fa-gear"></i>
+            <i class="fa-solid fa-bell"></i>
+
+        </div>
+    </header>
+
+
+ <!-- Find Clinic -->
+  
+ <section class="clinic-hero">
+    
+    <h1>Find a Clinic</h1>
+    <p> Search Clinics and schedule an appointment with doctors through Clinic </p>
+    
+    <div class="clinic-search">
+        
+        <input type="text" placeholder="Search"> 
+        <input type="text" placeholder="Zip Code or Neighborhood">
+        
+        <button>Current</button>
+        <button>Search</button>
+
+    </div>
+
+</section>
+
+
+ <!-- Map and List -->
+ <section class="view-options">
+    
+    <button class="view-active" id="mapViewBtn">
+        <i class="fa-solid fa-map-location-dot"></i>
+        Map
+    </button>
+
+    <button id="listViewBtn">
+        <i class="fa-solid fa-list"></i>
+        List
+    </button>
+
+ </section>
+
+<!-- Clinic Content -->
+<section class="clinic-content">
+
+<!-- Filters -->
+    <div class="clinic-sidebar">
+    <div class="search-filters">
+        <input type="text" placeholder="Primary Care">
+        <input type="text" placeholder="Zip code or Neighborhood">
+    
+    </div>
+
+
+    <div class="filter-by">
+        <h3>Filter By</h3>
+        <select>
+            <option>Specialty</option>
+            <option>Primary Care</option>
+            <option>Emergency Medicine</option>
+            <option>Dermatology</option>
+            <option>Neurology</option>
+        </select>
+
+        <select>
+            <option>Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            </select>
+
+        <select>
+            <option>Condition</option>
+            <option>Heart Disease</option>
+            <option>Diabetes</option>
+            <option>Blood Pressure</option>
+        </select>
+
+        <select>
+            <option>Language</option>
+            <option>English</option>
+            <option>Persian</option>
+            <option>Pashto</option>
+        </select>
+
+    </div>
+
+
+    <div class="checkbox-section">
+        <h3>Provide who treat</h3>
+        <label>
+            <input type="checkbox" name="age" value="all-ages"> All ages
+        </label>
+
+        <label>
+            <input type="checkbox" name="age" value="children"> Children
+        </label>
+
+        <label>
+            <input type="checkbox" name="age" value="adults"> Adults
+        </label>
+
+    </div>
+
+
+    <div class="checkbox-section">
+        <h3>View only</h3>
+        <label>
+            <input type="checkbox" name="view" value="online-scheduling"> Online scheduling
+        </label>
+
+        <label>
+            <input type="checkbox" name="view" value="primary-care"> Primary care
+        </label>
+
+    </div>
+
+</div>
+
+
+<!-- Map -->
+ <div class="map-area">
+    <div class="map-type">
+        
+        <button class="map-active" id="mapTypeBtn">Map</button>
+        <button id="satelliteTypeBtn">Satellite</button>
+
+    </div>
+
+    <div id="map"></div>
+
+</div>
+</section>
+
+
+<!-- Footer -->
+ <footer>
+    
+    <p> © 2026, made with &hearts; by MyPatientHUB for a better web. </p>
+    
+    <div>
+        <a>MyPatientHUB</a>
+        <a>About Us</a>
+        <a>Blog</a>
+    </div>
+
+ </footer>
+</section>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
