@@ -1,7 +1,6 @@
-
 # MyPatientHUB
 
-MyPatientHUB is a simple healthcare website project that includes a login page and a responsive healthcare dashboard.
+MyPatientHUB is a simple healthcare website project that includes a login page, a responsive healthcare dashboard, and dedicated pages for finding clinics and doctors.
 
 The project provides a simple interface for users to access healthcare-related services such as appointments, doctors, clinics, pharmacies, chat, and marketplace services.
 
@@ -35,6 +34,18 @@ The project provides a simple interface for users to access healthcare-related s
 - Logout option
 - Settings and notification icons
 
+### Find Clinic Page
+
+- Dedicated HTML page for finding clinics
+- New CSS styling for the clinic page
+- Healthcare-focused interface for clinic-related information
+
+### Find Doctor Page
+
+- Dedicated HTML page for finding doctors
+- New CSS styling for the doctor page
+- Healthcare-focused interface for doctor-related information
+
 ### Responsive Design
 
 The website is designed to work on:
@@ -44,7 +55,7 @@ The website is designed to work on:
 - Tablets
 - Mobile phones
 
-On smaller screens, the sidebar changes into a mobile-friendly navigation area and the dashboard cards change to a single-column layout.
+CSS media queries are used to adjust the layout for different screen sizes. On smaller screens, the navigation and dashboard cards adapt to provide a mobile-friendly experience.
 
 ## Technologies Used
 
@@ -60,19 +71,24 @@ MyPatientHUB/
 │
 ├── login.html
 ├── dashboard.html
+├── find-clinic.html
+├── find-doctor.html
 ├── style.css
+├── find-clinic.css
+├── find-doctor.css
 ├── script.js
 ├── background img.jpeg
 └── README.md
 ```
-
 ## How to Run the Project
 
-1. Download or clone this project.
+1. Download or clone this project from the GitHub repository.
 2. Open the project folder in Visual Studio Code.
 3. Open `login.html` in a web browser.
 4. Enter an email and password to test the login validation.
 5. Open `dashboard.html` to view the healthcare dashboard.
+6. Open `find-clinic.html` to view the Find Clinic page.
+7. Open `find-doctor.html` to view the Find Doctor page.
 
 ## Login Validation
 
@@ -89,13 +105,15 @@ If the information is valid, the user receives a login successful message.
 
 ## Responsive Layout
 
-CSS media queries are used to make the website responsive.
+CSS media queries are used to make the website responsive across desktop computers, laptops, tablets, and mobile phones.
 
 The layout changes at different screen sizes:
 
 - **Desktop:** Full sidebar and two-column dashboard cards.
-- **Tablet:** Smaller sidebar and one-column cards.
+- **Tablet:** Smaller sidebar and adjusted dashboard card layout.
 - **Mobile:** Top navigation, full-width content, and one-column cards.
+
+The Find Clinic and Find Doctor pages also have their own CSS styling to support the website's layout and design across different screen sizes.
 
 ## Authors
 
