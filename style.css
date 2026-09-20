@@ -16,9 +16,11 @@ a {
 }
 
 button,
-input {
+input,
+select {
   font-family: inherit;
 }
+
 
 /* LOGIN */
 
@@ -64,7 +66,7 @@ input {
 .login > h1 {
   font-size: 38px;
   margin-bottom: 12px;
-  color:white;
+  color: white;
   text-align: center;
 }
 
@@ -161,8 +163,11 @@ input {
   color: #8993a4;
 }
 
-.or{
+.or {
   text-align: center;
+  margin: 12px 0;
+  font-size: 12px;
+  color: #aaa;
 }
 
 .options label {
@@ -176,12 +181,6 @@ input {
   height: 13px;
 }
 
-.or {
-  margin: 12px 0;
-  font-size: 12px;
-  color: #aaa;
-}
-
 .login-page > footer {
   position: absolute;
   bottom: 35px;
@@ -193,6 +192,7 @@ input {
   color: #8d98a8;
   font-size: 13px;
 }
+
 
 /* DASHBOARD */
 
@@ -297,6 +297,7 @@ input {
   font-size: 20px;
 }
 
+
 /* MAIN CONTENT */
 
 .dashboard-content {
@@ -356,7 +357,8 @@ input {
 }
 
 .top > i {
-  color: #344054;}
+  color: #344054;
+}
 
 .content {
   padding: 20px 30px 0;
@@ -368,10 +370,11 @@ input {
   color: #344054;
 }
 
-/* CARDS */
+
+/* DASHBOARD CARDS */
 
 .cards {
-  display:grid;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
 }
@@ -396,6 +399,7 @@ input {
   font-size: 15px;
   color: #42526b;
 }
+
 
 /* CHART */
 
@@ -455,6 +459,7 @@ input {
     #2c58e7 300deg 360deg
   );
 }
+
 
 /* CARD LIST */
 
@@ -518,7 +523,7 @@ input {
 
 .cards article > button:hover {
   transform: translateY(-2px);
-  background-color:#9b00c7 ;
+  background-color: #9b00c7;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
@@ -533,8 +538,6 @@ input {
   color: #63b536;
   font-size: 11px;
 }
-
-/* Creates a curved and slightly tilted decorative line near the bottom */
 
 .line {
   position: absolute;
@@ -614,6 +617,355 @@ input {
   font-size: 12px;
 }
 
+
+/* FIND DOCTOR / FIND CLINIC */
+
+/* HERO */
+
+.doctor-hero,
+.clinic-hero {
+  margin-top: 30px;
+  padding: 35px;
+  background: linear-gradient(135deg, #e300b0, #9e00c7);
+  border-radius: 15px;
+  color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+}
+
+.doctor-hero h1,
+.clinic-hero h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.doctor-hero p,
+.clinic-hero p {
+  color: #f9eaff;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+
+/* SEARCH */
+
+.doctor-search,
+.clinic-search {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 120px 120px;
+  gap: 10px;
+}
+
+.doctor-search input,
+.clinic-search input {
+  height: 45px;
+  padding: 0 15px;
+  border: none;
+  outline: none;
+  border-radius: 9px;
+  font-size: 13px;
+  background: white;
+  color: #344054;
+}
+
+.doctor-search input:focus,
+.clinic-search input:focus {
+  box-shadow: 0 0 0 2px #f3c5f5;
+}
+
+.doctor-search button,
+.clinic-search button {
+  border: none;
+  border-radius: 9px;
+  background: white;
+  color: #9b00c7;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.doctor-search button:hover,
+.clinic-search button:hover {
+  background: #f8e8fb;
+  transform: translateY(-2px);
+}
+
+
+/* SERVICES / SPECIALTIES */
+
+.special-services,
+.specialty-section {
+  margin-top: 35px;
+}
+
+.special-services h2,
+.specialty-section h2 {
+  font-size: 21px;
+  color: #344054;
+  margin-bottom: 8px;
+}
+
+.specialty-section > p {
+  color: #697586;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+
+/* SERVICE CARDS */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.service-card {
+  background: white;
+  border: 1px solid #e6e9ee;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+  border-color: #d9a7e5;
+}
+
+.service-icon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #f3e8ff;
+  color: #9b00c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.service-card h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #42526b;
+}
+
+.service-card p {
+  color: #7a8495;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.service-card > i {
+  margin-left: auto;
+  color: #9b00c7;
+}
+
+
+/* SPECIALTY BOXES */
+
+.specialty-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.specialty-box {
+  background: white;
+  border: 1px solid #e6e9ee;
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #42526b;
+}
+
+.specialty-box:hover {
+  background: #f8edfb;
+  border-color: #c98bd8;
+  color: #9b00c7;
+  transform: translateY(-2px);
+}
+
+.specialty-box i {
+  color: #9b00c7;
+}
+
+
+/* CLINIC VIEW OPTIONS */
+
+.view-options {
+  margin: 25px 0;
+  display: flex;
+  gap: 8px;
+}
+
+.view-options button,
+.map-type button {
+  padding: 10px 20px;
+  border: 1px solid #dfe4ea;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #596579;
+  transition: all 0.3s ease;
+}
+
+.view-options button:hover,
+.map-type button:hover {
+  border-color: #c98bd8;
+  color: #9b00c7;
+}
+
+.view-options button i {
+  margin-right: 7px;
+}
+
+.view-options .view-active,
+.map-type .map-active {
+  background: linear-gradient(135deg, #e300b0, #9e00c7);
+  color: white;
+  border-color: #9e00c7;
+}
+
+
+/* CLINIC CONTENT */
+
+.clinic-content {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+}
+
+.clinic-sidebar {
+  background: white;
+  border: 1px solid #e6e9ee;
+  border-radius: 15px;
+  padding: 20px;
+  height: fit-content;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+
+/* FILTERS */
+
+.search-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #edf0f3;
+}
+
+.search-filters input {
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #dfe4ea;
+  border-radius: 8px;
+  outline: none;
+  color: #344054;
+}
+
+.search-filters input:focus {
+  border-color: #a000c7;
+}
+
+.filter-by,
+.checkbox-section {
+  padding-top: 20px;
+}
+
+.filter-by h3,
+.checkbox-section h3 {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #42526b;
+}
+
+.filter-by select {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 9px;
+  padding: 0 10px;
+  border: 1px solid #dfe4ea;
+  border-radius: 8px;
+  background: white;
+  outline: none;
+  color: #596579;
+}
+
+.filter-by select:focus {
+  border-color: #a000c7;
+}
+
+.checkbox-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkbox-section label {
+  font-size: 13px;
+  color: #626d7e;
+}
+
+.checkbox-section input {
+  accent-color: #a000c7;
+  margin-right: 7px;
+}
+
+
+/* MAP */
+
+.map-area {
+  min-height: 500px;
+  background: white;
+  border: 1px solid #e6e9ee;
+  border-radius: 15px;
+  padding: 15px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.map-type {
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  z-index: 2;
+}
+
+.map-type button {
+  padding: 9px 15px;
+  background: white;
+}
+
+#map {
+  width: 100%;
+  height: 470px;
+  border-radius: 10px;
+  background:
+    linear-gradient(45deg, #f0f1f3 25%, transparent 25%),
+    linear-gradient(-45deg, #f0f1f3 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #f0f1f3 75%),
+    linear-gradient(-45deg, transparent 75%, #f0f1f3 75%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0;
+}
+
+
 /* FOOTER */
 
 .dashboard-content > footer {
@@ -631,9 +983,9 @@ input {
   gap: 35px;
 }
 
-/* RESPONSIVE */
 
-/* LAPTOP */
+/* RESPONSIVE - LAPTOP */
+
 @media (max-width: 1200px) {
 
   .dashboard aside {
@@ -669,13 +1021,18 @@ input {
     left: 30px;
     top: 30px;
   }
+
+  .doctor-search,
+  .clinic-search {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 
-/* TABLET */
+/* RESPONSIVE - TABLET */
+
 @media (max-width: 900px) {
 
-  /* Sidebar becomes smaller */
   .dashboard aside {
     width: 70px;
     padding: 20px 10px;
@@ -686,7 +1043,6 @@ input {
     width: calc(100% - 70px);
   }
 
-  /* Hide the text in the sidebar */
   .logo span {
     display: none;
   }
@@ -711,7 +1067,6 @@ input {
     padding-left: 0;
   }
 
-  /* Header */
   .dashboard header {
     padding: 0 20px;
   }
@@ -724,15 +1079,10 @@ input {
     width: 140px;
   }
 
-  /* Cards become one column */
   .cards {
     grid-template-columns: 1fr;
   }
 
-  /*
-    Chart is no longer absolutely positioned.
-    This allows the card to adjust to the screen size.
-  */
   .chart {
     position: relative;
     left: auto;
@@ -749,12 +1099,10 @@ input {
     top: 30px;
   }
 
-  /* List uses the full card width */
   .cards article ul {
     margin: 10px 0 20px;
   }
 
-  /* Button no longer has a fixed position */
   .cards article > button {
     position: relative;
     left: auto;
@@ -762,22 +1110,28 @@ input {
     margin-top: 10px;
   }
 
-  /* Appointments */
   .doctor {
     grid-template-columns: 45px 1fr 90px 60px;
+  }
+
+  .clinic-content {
+    grid-template-columns: 1fr;
+  }
+
+  .specialty-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 
-/* MOBILE */
+/* RESPONSIVE - MOBILE */
+
 @media (max-width: 600px) {
 
-  /* Dashboard */
   .dashboard {
     display: block;
   }
 
-  /* Sidebar becomes a top navigation bar */
   .dashboard aside {
     position: relative;
     width: 100%;
@@ -793,7 +1147,6 @@ input {
     width: 100%;
   }
 
-  /* Logo */
   .logo {
     justify-content: center;
     padding: 5px 0 10px;
@@ -804,7 +1157,6 @@ input {
     display: inline;
   }
 
-  /* Navigation can scroll horizontally */
   .dashboard nav {
     display: flex;
     gap: 5px;
@@ -826,12 +1178,10 @@ input {
     font-size: 14px;
   }
 
-  /* Help button */
   .help {
     display: none;
   }
 
-  /* Header */
   .dashboard header {
     height: auto;
     min-height: 75px;
@@ -868,7 +1218,6 @@ input {
     font-size: 15px;
   }
 
-  /* Main content */
   .content {
     padding: 15px;
   }
@@ -878,7 +1227,6 @@ input {
     margin-bottom: 18px;
   }
 
-  /* Cards */
   .cards {
     grid-template-columns: 1fr;
     gap: 15px;
@@ -889,7 +1237,6 @@ input {
     padding: 18px 15px;
   }
 
-  /* Chart */
   .chart {
     position: relative;
     left: auto;
@@ -906,7 +1253,6 @@ input {
     top: 25px;
   }
 
-  /* List */
   .cards article ul {
     margin: 10px 0 15px;
   }
@@ -915,7 +1261,6 @@ input {
     font-size: 11px;
   }
 
-  /* Button */
   .cards article > button {
     position: relative;
     left: auto;
@@ -924,7 +1269,6 @@ input {
     margin-top: 5px;
   }
 
-  /* Health line */
   .line {
     position: relative;
     left: auto;
@@ -934,7 +1278,6 @@ input {
     margin-top: 20px;
   }
 
-  /* Appointments */
   .appointments {
     padding: 15px;
   }
@@ -952,7 +1295,6 @@ input {
     display: none;
   }
 
-  /* Footer */
   .dashboard-content > footer {
     flex-direction: column;
     gap: 15px;
@@ -967,7 +1309,65 @@ input {
   }
 
 
-  /* LOGIN */
+  /* FIND DOCTOR / CLINIC MOBILE */
+
+  .doctor-hero,
+  .clinic-hero {
+    padding: 25px 18px;
+  }
+
+  .doctor-hero h1,
+  .clinic-hero h1 {
+    font-size: 24px;
+  }
+
+  .doctor-hero p,
+  .clinic-hero p {
+    font-size: 13px;
+  }
+
+  .doctor-search,
+  .clinic-search {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-search input,
+  .clinic-search input {
+    height: 45px;
+  }
+
+  .doctor-search button,
+  .clinic-search button {
+    height: 45px;
+  }
+
+  .specialty-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clinic-content {
+    grid-template-columns: 1fr;
+  }
+
+  .clinic-sidebar {
+    width: 100%;
+  }
+
+  .map-area {
+    min-height: 400px;
+  }
+
+  #map {
+    height: 370px;
+  }
+
+
+  /* LOGIN MOBILE */
+
   .login-page {
     padding: 5px 10px 30px;
   }
@@ -1010,53 +1410,35 @@ input {
 }
 
 
-/* SMALL MOBILE */
-@media (max-width: 600px) {
+/*EXTRA SMALL MOBILE */
 
-  .dashboard {
-    display: block;
+@media (max-width: 400px) {
+
+  .doctor-hero,
+  .clinic-hero {
+    padding: 22px 15px;
   }
 
-  .dashboard aside {
-    position: relative;
-    width: 100%;
-    min-height: auto;
-    height: auto;
+  .doctor-hero h1,
+  .clinic-hero h1 {
+    font-size: 21px;
   }
 
-  .dashboard-content {
-    margin-left: 0;
-    width: 100%;
+  .service-card {
+    padding: 16px;
   }
 
-  .content {
-    width: 100%;
+  .service-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .specialty-box {
     padding: 15px;
   }
 
-  .cards {
-    grid-template-columns: 1fr;
-    width: 100%;
-    gap: 15px;
+  .top input {
+    width: 90px;
   }
-
-  .cards article {
-    width: 100%;
-    min-height: auto;
-    padding: 18px 15px;
-  }
-
-  .chart {
-    position: relative;
-    left: auto;
-    top: auto;
-    margin: 15px auto;
-    width: 125px;
-    height: 125px;
-  }
-
-  .cards article ul {
-    margin: 10px 0 15px;
-  }
-
 }
+
