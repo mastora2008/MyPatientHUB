@@ -14,7 +14,7 @@ function FindDoctor() {
 
         <nav>
 
-          <a href="index.html">
+          <a href="My-patient-hub.html">
             <i className="fa-solid fa-table-columns"></i>
             Dashboard
           </a>
