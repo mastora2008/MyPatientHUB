@@ -1,4 +1,17 @@
+import { useState } from "react";
+
 function FindClinic() {
+  const [view, setView] = useState("map");
+  const [mapType, setMapType] = useState("map");
+
+  function handleViewChange(newView) {
+    setView(newView);
+  }
+
+  function handleMapTypeChange(newType) {
+    setMapType(newType);
+  }
+
   return (
     <main className="dashboard">
 
@@ -153,9 +166,13 @@ function FindClinic() {
               placeholder="Zip Code or Neighborhood"
             />
 
-            <button>Current</button>
+            <button>
+              Current
+            </button>
 
-            <button>Search</button>
+            <button>
+              Search
+            </button>
 
           </div>
 
@@ -165,7 +182,10 @@ function FindClinic() {
         {/* Map and List Buttons */}
         <section className="view-options">
 
-          <button className="view-active">
+          <button
+            className={view === "map" ? "view-active" : ""}
+            onClick={() => handleViewChange("map")}
+          >
 
             <i className="fa-solid fa-map-location-dot"></i>
 
@@ -174,7 +194,10 @@ function FindClinic() {
           </button>
 
 
-          <button>
+          <button
+            className={view === "list" ? "view-active" : ""}
+            onClick={() => handleViewChange("list")}
+          >
 
             <i className="fa-solid fa-list"></i>
 
@@ -186,10 +209,7 @@ function FindClinic() {
 
 
         {/* Clinic Content */}
-        <section className="clinic-content">
-
-
-          {/* Filters */}
+        <section className="clinic-content">{/* Filters */}
           <div className="clinic-sidebar">
 
 
@@ -345,11 +365,18 @@ function FindClinic() {
 
             <div className="map-type">
 
-              <button className="map-active">
+              <button
+                className={mapType === "map" ? "map-active" : ""}
+                onClick={() => handleMapTypeChange("map")}
+              >
                 Map
               </button>
 
-              <button>
+
+              <button
+                className={mapType === "satellite" ? "map-active" : ""}
+                onClick={() => handleMapTypeChange("satellite")}
+              >
                 Satellite
               </button>
 
@@ -391,4 +418,3 @@ function FindClinic() {
 }
 
 export default FindClinic;
-

@@ -1,4 +1,43 @@
+import { useState } from "react";
+
 function FindDoctor() {
+  const [doctorSearch, setDoctorSearch] = useState("");
+  const [location, setLocation] = useState("");
+  const [openService, setOpenService] = useState(null);
+
+  function handleDoctorSearch() {
+    const doctor = doctorSearch.trim();
+    const place = location.trim();
+
+    if (doctor === "") {
+      alert("Please enter a doctor name or specialty.");
+      return;
+    }
+
+    if (place === "") {
+      alert("Please enter your location.");
+      return;
+    }
+
+    alert("Searching for " + doctor + " in " + place);
+  }
+
+  function handleCurrentLocation() {
+    setLocation("Current Location");
+  }
+
+  function handleServiceClick(index) {
+  if (openService === index) {
+    setOpenService(null);
+  } else {
+    setOpenService(index);
+  }
+}
+
+function handleSpecialtyClick(specialty) {
+  alert("You selected: " + specialty);
+}
+
   return (
     <main className="dashboard">
 
@@ -92,7 +131,10 @@ function FindDoctor() {
 
             <div className="top-search">
               <i className="fa-solid fa-magnifying-glass"></i>
-              <input type="search" placeholder="Type here..." />
+              <input
+                type="search"
+                placeholder="Type here..."
+              />
             </div>
 
             <a href="login.html">
@@ -122,17 +164,25 @@ function FindDoctor() {
             <input
               type="text"
               placeholder="Search a doctor by name, specialty"
+              value={doctorSearch}
+              onChange={(e) => setDoctorSearch(e.target.value)}
             />
 
             <input
               type="text"
               placeholder="Zip Code or Neighborhood"
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
             />
 
-            <button>Current</button>
-            <button>Search</button>
+            <button onClick={handleCurrentLocation}>
+              Current
+            </button>
 
-          </div>
+            <button onClick={handleDoctorSearch}>
+              Search
+            </button>
+            </div>
 
         </section>
 
@@ -144,7 +194,11 @@ function FindDoctor() {
 
           <div className="services-grid">
 
-            <article className="service-card">
+            {/* Service 1 */}
+            <article
+              className="service-card"
+              onClick={() => handleServiceClick(0)}
+            >
 
               <div className="service-icon">
                 <i className="fa-solid fa-heart-pulse"></i>
@@ -152,7 +206,12 @@ function FindDoctor() {
 
               <div>
                 <h3>Primary Care and Internal MD</h3>
-                <p>
+
+                <p
+                  style={{
+                    display: openService === 0 ? "block" : "none"
+                  }}
+                >
                   Our doctors partner with you to help you reach your wellness goals.
                 </p>
               </div>
@@ -162,7 +221,11 @@ function FindDoctor() {
             </article>
 
 
-            <article className="service-card">
+            {/* Service 2 */}
+            <article
+              className="service-card"
+              onClick={() => handleServiceClick(1)}
+            >
 
               <div className="service-icon">
                 <i className="fa-solid fa-stethoscope"></i>
@@ -170,7 +233,12 @@ function FindDoctor() {
 
               <div>
                 <h3>Emergency Care</h3>
-                <p>
+
+                <p
+                  style={{
+                    display: openService === 1 ? "block" : "none"
+                  }}
+                >
                   We provide emergency care for adults and children.
                 </p>
               </div>
@@ -180,7 +248,11 @@ function FindDoctor() {
             </article>
 
 
-            <article className="service-card">
+            {/* Service 3 */}
+            <article
+              className="service-card"
+              onClick={() => handleServiceClick(2)}
+            >
 
               <div className="service-icon">
                 <i className="fa-solid fa-heart"></i>
@@ -188,7 +260,12 @@ function FindDoctor() {
 
               <div>
                 <h3>Imaging Services</h3>
-                <p>
+
+                <p
+                  style={{
+                    display: openService === 2 ? "block" : "none"
+                  }}
+                >
                   From X-ray to MRI scans, we offer imaging services.
                 </p>
               </div>
@@ -198,7 +275,11 @@ function FindDoctor() {
             </article>
 
 
-            <article className="service-card">
+            {/* Service 4 */}
+            <article
+              className="service-card"
+              onClick={() => handleServiceClick(3)}
+            >
 
               <div className="service-icon">
                 <i className="fa-solid fa-kit-medical"></i>
@@ -206,7 +287,12 @@ function FindDoctor() {
 
               <div>
                 <h3>Urgent Care</h3>
-                <p>
+
+                <p
+                  style={{
+                    display: openService === 3 ? "block" : "none"
+                  }}
+                >
                   We offer urgent care for different health needs.
                 </p>
               </div>
@@ -216,6 +302,7 @@ function FindDoctor() {
             </article>
 
           </div>
+
         </section>
 
 
@@ -230,32 +317,34 @@ function FindDoctor() {
 
           <div className="specialty-grid">
 
-            <div className="specialty-box">
-              <span>Anesthesiology</span>
-              <i className="fa-solid fa-chevron-down"></i>
+            <div className="specialty-box"
+             onClick={() => handleSpecialtyClick("Anesthesiology")}
+             >
+            <span>Anesthesiology</span>
+            <i className="fa-solid fa-chevron-down"></i>
             </div>
 
-            <div className="specialty-box">
+            <div className="specialty-box" onClick={() => handleSpecialtyClick("Dermatology")}>
               <span>Dermatology</span>
               <i className="fa-solid fa-chevron-down"></i>
             </div>
 
-            <div className="specialty-box">
+            <div className="specialty-box" onClick={() => handleSpecialtyClick("Emergency Medicine")}>
               <span>Emergency Medicine</span>
               <i className="fa-solid fa-chevron-down"></i>
             </div>
 
-            <div className="specialty-box">
+            <div className="specialty-box" onClick={() => handleSpecialtyClick("Neurology")}>
               <span>Neurology</span>
               <i className="fa-solid fa-chevron-down"></i>
             </div>
 
-            <div className="specialty-box">
+            <div className="specialty-box" onClick={() => handleSpecialtyClick("Cardiology")}>
               <span>Consultation</span>
               <i className="fa-solid fa-chevron-down"></i>
             </div>
 
-            <div className="specialty-box">
+            <div className="specialty-box" onClick={() => handleSpecialtyClick("Ophthalmology")}>
               <span>Ophthalmology</span>
               <i className="fa-solid fa-chevron-down"></i>
             </div>
