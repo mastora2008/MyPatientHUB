@@ -2,8 +2,15 @@
     box-sizing: border-box;
 }
 
-body {
+html,
+body,
+#root {
     margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f5f7fa;
 }
@@ -17,13 +24,15 @@ body {
 
 .main-area {
     flex: 1;
-    display: flex;
-    flex-direction: column;
     min-width: 0;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .page-content {
     flex: 1;
+    min-width: 0;
     overflow-y: auto;
+    overflow-x: hidden;
 }

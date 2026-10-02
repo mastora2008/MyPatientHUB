@@ -9,14 +9,19 @@ import "./App.css";
 function App() {
     return (
         <Router>
+
             <div className="app">
+
                 <Sidebar />
 
                 <div className="main-area">
+
                     <Header />
 
                     <main className="page-content">
+
                         <Routes>
+
                             <Route
                                 path="/"
                                 element={<h1>Dashboard</h1>}
@@ -36,10 +41,15 @@ function App() {
                                 path="/find-clinic"
                                 element={<h1>Find Clinic</h1>}
                             />
+
                         </Routes>
+
                     </main>
+
                 </div>
+
             </div>
+
         </Router>
     );
 }

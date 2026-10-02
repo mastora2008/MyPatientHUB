@@ -31,8 +31,6 @@ function Header() {
     return (
         <header className="header">
 
-            {/* LEFT SIDE */}
-
             <div className="header-title">
 
                 <div className="breadcrumb">
@@ -50,12 +48,9 @@ function Header() {
             </div>
 
 
-            {/* RIGHT SIDE */}
-
             <div className="header-right">
 
                 <i className="fa-solid fa-bars mobile-menu"></i>
-
 
                 <div className="header-search">
 
