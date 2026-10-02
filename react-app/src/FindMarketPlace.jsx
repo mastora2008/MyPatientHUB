@@ -93,61 +93,155 @@ const FindMarketplace = () => {
       </div>
 
       {/* ================= بخش پایینی: جدول ================= */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
-        <h2 className="text-lg font-bold text-gray-800 mb-6">
-          Other results for healthy diet search
-        </h2>
+<div className="bg-white rounded-lg shadow-sm border border-gray-100 p-6 mt-8">
 
-        <div className="flex flex-col sm:flex-row justify-between items-center mb-4 gap-4">
-          <div className="flex items-center text-sm text-gray-500">
-            <select className="border border-gray-300 rounded px-2 py-1 mr-2 outline-none focus:border-fuchsia-500">
-              <option>7</option>
-              <option>10</option>
-              <option>20</option>
-            </select>
-            entries per page
-          </div>
-          <input 
-            type="text" 
-            placeholder="Search..." 
-            className="border border-gray-300 rounded px-3 py-1.5 text-sm outline-none focus:border-fuchsia-500 w-full sm:w-64"
-          />
-        </div>
+  <h2 className="text-lg font-bold text-gray-800 mb-6">
+    Other results for healthy diet search
+  </h2>
 
-        <div className="overflow-x-auto">
-          <table className="w-full text-left text-sm text-gray-500">
-            <thead className="text-xs text-gray-400 uppercase bg-gray-50 border-b border-gray-100">
-              <tr>
-                <th className="px-4 py-3 font-medium">Name</th>
-                <th className="px-4 py-3 font-medium">Category</th>
-                <th className="px-4 py-3 font-medium">Service By</th>
-                <th className="px-4 py-3 font-medium">Discount</th>
-                <th className="px-4 py-3 font-medium">Price</th>
-                <th className="px-4 py-3 font-medium">ID</th>
-              </tr>
-            </thead>
-            <tbody>
-              {tableData.map((row, index) => (
-                <tr key={index} className="border-b border-gray-50 hover:bg-gray-50">
-                  <td className="px-4 py-4 flex items-center gap-3 text-gray-800 font-medium">
-                    <img src={row.image} alt={row.name} className="w-10 h-8 rounded object-cover" />
-                    {row.name}
-                  </td>
-                  <td className="px-4 py-4">{row.category}</td>
-                  <td className="px-4 py-4 flex items-center gap-2">
-                    <img src={row.logo} alt={row.serviceBy} className="w-5 h-5 rounded-full" />
-                    <span className="text-gray-800 font-medium">{row.serviceBy}</span>
-                  </td>
-                  <td className="px-4 py-4">{row.discount}</td>
-                  <td className="px-4 py-4">{row.price}</td>
-                  <td className="px-4 py-4">{row.id}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
+  {/* Dropdown + Search */}
+  <div className="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">
+
+    <div className="flex items-center text-sm text-gray-500">
+      <select className="border border-gray-300 rounded-lg px-4 py-3 mr-2 outline-none focus:border-fuchsia-500 w-64">
+        <option>7</option>
+        <option>10</option>
+        <option>20</option>
+      </select>
+
+      <span className="text-gray-400">
+        entries per page
+      </span>
     </div>
+
+    <input
+      type="text"
+      placeholder="Search..."
+      className="border border-gray-300 rounded-lg px-4 py-3 text-sm outline-none focus:border-fuchsia-500 w-full sm:w-64"
+    />
+
+  </div>
+
+  {/* Table */}
+  <div className="overflow-x-auto">
+
+    <table className="w-full text-left">
+
+      <thead>
+        <tr className="border-b border-gray-200 text-xs text-gray-400 uppercase">
+
+          <th className="px-4 py-4 font-semibold">
+            Name
+          </th>
+
+          <th className="px-4 py-4 font-semibold">
+            Category
+          </th>
+
+          <th className="px-4 py-4 font-semibold">
+            Service By
+          </th>
+
+          <th className="px-4 py-4 font-semibold">
+            Discount
+          </th>
+
+          <th className="px-4 py-4 font-semibold">
+            Price
+          </th>
+
+          <th className="px-4 py-4 font-semibold">
+            ID
+          </th>
+
+        </tr>
+      </thead>
+
+      <tbody>
+
+        {tableData.map((row, index) => (
+
+          <tr
+            key={index}
+            className="border-b border-gray-100 hover:bg-gray-50"
+          >
+
+            {/* NAME */}
+            <td className="px-4 py-5">
+
+              <div className="flex items-center gap-4">
+
+                <img
+                  src={row.image}
+                  alt={row.name}
+                  className="w-20 h-12 object-cover rounded"
+                />
+
+                <span className="text-gray-800 font-semibold">
+                  {row.name}
+                </span>
+
+              </div>
+
+            </td>
+
+            {/* CATEGORY */}
+            <td className="px-4 py-5 text-gray-500">
+              {row.category}
+            </td>
+
+            {/* SERVICE BY */}
+            <td className="px-4 py-5">
+
+              <div className="flex items-center gap-4">
+
+                <img
+                  src={row.logo}
+                  alt={row.serviceBy}
+                  className="w-20 h-12 object-contain"
+                />
+
+                <span className="text-gray-800 font-semibold">
+                  {row.serviceBy}
+                </span>
+
+              </div>
+
+            </td>
+
+            {/* DISCOUNT */}
+            <td className="px-4 py-5 text-gray-500">
+              {row.discount}
+            </td>
+
+            {/* PRICE */}
+            <td className="px-4 py-5 text-gray-500">
+              {row.price}
+            </td>
+
+            {/* ID */}
+            <td className="px-4 py-5 text-gray-500">
+              {row.id}
+            </td>
+
+          </tr>
+
+        ))}
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+  {/* Bottom text */}
+  <div className="mt-6 text-gray-400 text-sm">
+    Showing 1 to {tableData.length} of {tableData.length} entries
+  </div>
+
+</div>
+</div>
+      
   );
 };
 
