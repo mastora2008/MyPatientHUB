@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fa" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPatientHUB - My Dependents</title>
+    <!-- کتابخانه آیکون‌های فونت‌آسوم -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- سایدبار سمت چپ -->
+    <div class="sidebar">
+        <div class="menu-items">
+            <a href="#" class="menu-item"><i class="fa-solid fa-calendar-check"></i> Appointments</a>
+            <a href="#" class="menu-item"><i class="fa-solid fa-user-doctor"></i> Find Doctor</a>
+            <a href="#" class="menu-item"><i class="fa-solid fa-hospital"></i> Find Clinic</a>
+            <a href="#" class="menu-item"><i class="fa-solid fa-comment-dots"></i> Chat</a>
+            <a href="#" class="menu-item"><i class="fa-solid fa-store"></i> Find MarketPlace</a>
+            <a href="#" class="menu-item"><i class="fa-solid fa-pills"></i> Find Pharmacy</a>
+            <a href="#" class="menu-item active"><i class="fa-solid fa-user-group"></i> My Dependents</a>
+            <a href="#" class="menu-item"><i class="fa-solid fa-user-gear"></i> My Account</a>
+            <a href="#" class="menu-item"><i class="fa-solid fa-gear"></i> Settings</a>
+        </div>
+        <div class="sidebar-footer">
+            <div class="download-box">
+                <div class="question-icon">?</div>
+                <div class="download-text"><span>Download</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- بدنه اصلی -->
+    <div class="main-container">
+        <div class="topbar">
+            <div class="breadcrumb"><i class="fa-solid fa-house"></i> / Mydependents &nbsp; <strong style="color: #1e293b;">Mydependents</strong></div>
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" placeholder="Type here...">
+            </div>
+            <div class="user-menu">
+                <span><i class="fa-solid fa-right-from-bracket"></i> Log out</span>
+                <i class="fa-solid fa-gear icon-btn"></i>
+                <i class="fa-solid fa-bell icon-btn"></i>
+            </div>
+        </div>
+
+        <div class="content-body">
+            <div class="title-section">
+                <h1>Build Your Profile</h1>
+                <p>This information will let us know more about your Family.</p>
+            </div>
+
+            <!-- نوار مراحل (Stepper) -->
+            <div class="stepper">
+                <div class="step-line"></div>
+                <div class="step-item active" id="indicator-1" onclick="goToStep(1)">
+                    <div class="step-circle"></div>
+                    <span>Dependents Registration</span>
+                </div>
+                <div class="step-item" id="indicator-2" onclick="goToStep(2)">
+                    <div class="step-circle"></div>
+                    <span>Dependents Health Records</span>
+                </div>
+                <div class="step-item" id="indicator-3" onclick="goToStep(3)">
+                    <div class="step-circle"></div>
+                    <span>Family Care Plan</span>
+                </div>
+            </div>
+
+            <!-- کادر فرم‌ها -->
+            <div class="form-card">
+                
+                <!-- مرحله اول -->
+                <div class="form-step active" id="step-1">
+                    <div class="form-header-text">
+                        <h3>Let's start with the basic information</h3>
+                        <p>Let us know With name and last name. contacting you at</p>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" placeholder="Eg. Michael">
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" placeholder="Eg. Tomson">
+                        </div>
+                        <div class="form-group">
+                            <label>Birth Date</label>
+                            <select><option>February</option></select>
+                        </div>
+                        <div class="form-group">
+                            <label>&nbsp;</label>
+                            <select><option>1</option></select>
+                        </div>
+                        <div class="form-group">
+                            <label>&nbsp;</label>
+                            <select><option>2021</option></select>
+                        </div>
+                        <div class="form-group">
+                            <label>Relation</label>
+                            <input type="text" placeholder="Eg. Brother, Child">
+                        </div>
+                        <div class="form-group">
+                            <label>I'm</label>
+                            <select><option>Male</option></select>
+                        </div>
+                    </div>
+                    <div class="form-buttons">
+                        <button class="btn btn-next" onclick="goToStep(2)">NEXT</button>
+                    </div>
+                </div>
+
+                <!-- مرحله دوم (دقیقاً مطابق تصویر جدید شما) -->
+                <div class="form-step" id="step-2">
+                    <div class="form-header-text">
+                        <h3>Dependents Health Record</h3>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" placeholder="Eg. Michael">
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" placeholder="Eg. Tomson">
+                        </div>
+                        <div class="form-group">
+                            <label>Birth Date</label>
+                            <select><option>February</option></select>
+                        </div>
+                        <div class="form-group">
+                            <label>&nbsp;</label>
+                            <select><option>1</option></select>
+                        </div>
+                        <div class="form-group">
+                            <label>&nbsp;</label>
+                            <select><option>2021</option></select>
+                        </div>
+                        <div class="form-group">
+                            <label>Relation</label>
+                            <input type="text" placeholder="Eg. Brother, Child">
+                        </div>
+                        <div class="form-group">
+                            <label>I'm</label>
+                            <select><option>Male</option></select>
+                        </div>
+                    </div>
+                    <div class="form-buttons">
+                        <button class="btn btn-back" onclick="goToStep(1)">BACK</button>
+                        <button class="btn btn-next" onclick="goToStep(3)">NEXT</button>
+                    </div>
+                </div>
+
+                <!-- مرحله سوم -->
+                <div class="form-step" id="step-3">
+                    <div class="form-header-text">
+                        <h3>Family Care Plan</h3>
+                        <p>Select your preferred care plan</p>
+                    </div>
+                    <div class="plans-grid">
+                        <div class="plan-card">
+                            <h4>Standard Plan</h4>
+                            <ul>
+                                <li><i class="fa-solid fa-check"></i> Detail One</li>
+                                <li><i class="fa-solid fa-check"></i> Detail Two</li>
+                                <li><i class="fa-solid fa-check"></i> Detail Three</li>
+                            </ul>
+                        </div>
+                        <div class="plan-card">
+                            <h4>Premium Plan</h4>
+                            <ul>
+                                <li><i class="fa-solid fa-check"></i> Detail One</li>
+                                <li><i class="fa-solid fa-check"></i> Detail Two</li>
+                                <li><i class="fa-solid fa-check"></i> Detail Three</li>
+                            </ul>
+                        </div>
+                        <div class="plan-card">
+                            <h4>Super Plan</h4>
+                            <ul>
+                                <li><i class="fa-solid fa-check"></i> Detail One</li>
+                                <li><i class="fa-solid fa-check"></i> Detail Two</li>
+                                <li><i class="fa-solid fa-check"></i> Detail Three</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-buttons">
+                        <button class="btn btn-back" onclick="goToStep(2)">BACK</button>
+                        <button class="btn btn-submit" onclick="alert('Submitted successfully!')">SEND</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
