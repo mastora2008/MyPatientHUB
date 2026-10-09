@@ -1,40 +1,86 @@
-import React from 'react';
+import React from "react";
+import { useLocation } from "react-router-dom";
+import "./Header.css";
 
-const Header = () => {
-  return (
-    <header className="bg-white border-b border-gray-200 px-6 py-4 flex justify-between items-center shrink-0">
-      {/* بخش چپ هدر (مسیر و عنوان) */}
-      <div>
-        <small className="text-gray-500 text-xs flex items-center gap-1 mb-1">
-          <i className="fa-solid fa-house"></i> / Searchdoctor
-        </small>
-        <h3 className="font-bold text-gray-800 text-lg">Searchdoctor</h3>
-      </div>
+function Header() {
 
-      {/* بخش راست هدر (جستجو و آیکون‌ها) */}
-      <div className="flex items-center gap-6">
-        {/* منوی همبرگری برای موبایل (اختیاری) */}
-        <i className="fa-solid fa-bars text-gray-500 text-xl cursor-pointer md:hidden"></i>
+    const location = useLocation();
 
-        <div className="hidden md:flex items-center bg-gray-100 rounded-lg px-3 py-2 w-64">
-          <i className="fa-solid fa-magnifying-glass text-gray-400 mr-2"></i>
-          <input 
-            type="search" 
-            placeholder="Type here..." 
-            className="bg-transparent border-none outline-none text-sm w-full text-gray-700"
-          />
-        </div>
+    let pageName = "Dashboard";
 
-        <a href="login.html" className="flex items-center gap-2 text-gray-600 hover:text-fuchsia-600 text-sm font-medium">
-          <i className="fa-solid fa-circle-user text-lg"></i>
-          Log out
-        </a>
+    if (location.pathname === "/find-marketplace") {
+        pageName = "Marketplace";
+    } else if (location.pathname === "/find-doctor") {
+        pageName = "Find Doctor";
+    } else if (location.pathname === "/find-clinic") {
+        pageName = "Find Clinic";
+    } else if (location.pathname === "/appointments") {
+        pageName = "Appointments";
+    } else if (location.pathname === "/chat") {
+        pageName = "Chat";
+    } else if (location.pathname === "/find-pharmacy") {
+        pageName = "Find Pharmacy";
+    } else if (location.pathname === "/my-dependents") {
+        pageName = "My Dependents";
+    } else if (location.pathname === "/my-account") {
+        pageName = "My Account";
+    } else if (location.pathname === "/settings") {
+        pageName = "Settings";
+    }
 
-        <i className="fa-solid fa-gear text-gray-500 text-lg cursor-pointer hover:text-fuchsia-600"></i>
-        <i className="fa-solid fa-bell text-gray-500 text-lg cursor-pointer hover:text-fuchsia-600"></i>
-      </div>
-    </header>
-  );
-};
+    return (
+        <header className="header">
+
+            <div className="header-title">
+
+                <div className="breadcrumb">
+
+                    <i className="fa-solid fa-house"></i>
+
+                    <span>/</span>
+
+                    <span>{pageName}</span>
+
+                </div>
+
+                <h2>{pageName}</h2>
+
+            </div>
+
+
+            <div className="header-right">
+
+                <i className="fa-solid fa-bars mobile-menu"></i>
+
+                <div className="header-search">
+
+                    <i className="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        placeholder="Type here..."
+                    />
+
+                </div>
+
+
+                <a
+                    href="login.html"
+                    className="logout"
+                >
+                    <i className="fa-solid fa-circle-user"></i>
+                    Log out
+                </a>
+
+
+                <i className="fa-solid fa-gear header-icon"></i>
+
+                <i className="fa-solid fa-bell header-icon"></i>
+
+            </div>
+
+        </header>
+    );
+}
 
 export default Header;

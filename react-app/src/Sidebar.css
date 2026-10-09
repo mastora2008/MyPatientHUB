@@ -1,0 +1,141 @@
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background-color: white;
+    border-right: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 16px;
+    flex-shrink: 0;
+    overflow-y: auto;
+}
+
+
+/* LOGO */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 8px;
+    margin-bottom: 35px;
+}
+
+.logo-box {
+    width: 36px;
+    height: 36px;
+    background-color: #d9008b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text b {
+    color: #374151;
+    font-size: 15px;
+}
+
+.logo-text small {
+    color: #9ca3af;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+
+/* MENU */
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px;
+    border-radius: 8px;
+    color: #64748b;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.sidebar-link i {
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.sidebar-link:hover {
+    background-color: #f8fafc;
+    color: #d9008b;
+}
+
+
+/* ACTIVE MARKETPLACE */
+
+.sidebar-link.active {
+    background-color: #fdf0f9;
+    color: #d9008b;
+    font-weight: 600;
+}
+
+.sidebar-link.active i {
+    color: #d9008b;
+}
+
+
+/* HELP BUTTON */
+
+.help-section {
+    margin-top: auto;
+    padding-top: 25px;
+    padding-bottom: 5px;
+}
+
+.help-button {
+    width: 42px;
+    height: 42px;
+    background-color: #d9008b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    cursor: pointer;
+}
+
+.help-button:hover {
+    background-color: #b80076;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .logo-text {
+        display: none;
+    }
+
+    .sidebar-link span {
+        font-size: 14px;
+    }
+
+}
