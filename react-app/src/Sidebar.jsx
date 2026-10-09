@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
     <aside className="w-64 h-screen bg-white border-r border-gray-200 flex flex-col p-4 shrink-0 overflow-y-auto">
-      {/* لوگو */}
+      {/*logo*/}
       <div className="flex items-center gap-3 mb-8 px-2">
         <div className="bg-fuchsia-600 text-white w-8 h-8 flex items-center justify-center rounded font-bold text-xl">
           M
@@ -29,6 +30,13 @@ const Sidebar = () => {
         <Link to="/find-clinic" className="flex items-center gap-3 px-3 py-2.5 hover:bg-gray-50 rounded-md">
           <i className="fa-solid fa-hospital w-5"></i> Find Clinic
         </Link>
+        <NavLink to="/find-pharmacy" className={({ isActive }) => `flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors ${isActive ? "bg-purple-50 text-purple-600 font-semibold" 
+          : "hover:bg-gray-50 text-gray-600" 
+      }`
+    }
+  >
+    <i className="fa-solid fa-house-medical w-5"></i> Find Pharmacy
+  </NavLink>
         <Link to="/chat" className="flex items-center gap-3 px-3 py-2.5 hover:bg-gray-50 rounded-md">
           <i className="fa-solid fa-comments w-5"></i> Chat
         </Link>

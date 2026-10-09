@@ -24,6 +24,7 @@ function App() {
               <Route path="/" element={<h1 className="text-2xl font-bold text-gray-800">صفحه داشبورد</h1>} />
               <Route path="/find-doctor" element={<h1 className="text-2xl font-bold text-gray-800">صفحه Find Doctor</h1>} />
               <Route path="/find-clinic" element={<h1 className="text-2xl font-bold text-gray-800">صفحه Find Clinic</h1>} />
+              <Route path="/find-pharmacy" element={<FindPharmacy />} />
             </Routes>
           </main>
         </div>
