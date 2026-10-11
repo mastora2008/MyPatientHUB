@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account | MyPatientHUB</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="logo">
+            <img src="https://www.mypihub.com/favicon.ico" alt="MyPatientHUB">
+            <strong>MyPatientHUB</strong>
+        </div>
+
+        <ul class="menu">
+            <li><a href="dashboard.html"><i class="fa-solid fa-store"></i>Dashboard</a></li>
+            <li><a href="appointments.html"><i class="fa-solid fa-credit-card"></i>Appointments</a></li>
+            <li><a href="find-doctor.html"><i class="fa-solid fa-briefcase-medical"></i>Find Doctor</a></li>
+            <li><a href="find-clinic.html"><i class="fa-solid fa-hospital"></i>Find Clinic</a></li>
+            <li><a href="chat.html"><i class="fa-solid fa-message"></i>Chat</a></li>
+            <li><a href="marketplace.html"><i class="fa-solid fa-store"></i>Find MarketPlace</a></li>
+            <li><a href="pharmacy.html"><i class="fa-solid fa-capsules"></i>Find Pharmacy</a></li>
+            <li><a href="dependents.html"><i class="fa-solid fa-receipt"></i>My Dependents</a></li>
+            <li><a href="myaccount.html" class="active"><i class="fa-solid fa-screwdriver-wrench"></i>My Account</a></li>
+            <li><a href="settings.html"><i class="fa-solid fa-gear"></i>Settings</a></li>
+        </ul>
+
+        <div class="app-box">
+            <i class="fa-regular fa-circle-question"></i>
+            <p>Download<br>MyPIHUB Mobile App</p>
+            <div class="app-buttons">
+                <a href="#"><i class="fa-brands fa-apple"></i></a>
+                <a href="#"><i class="fa-brands fa-android"></i></a>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main" id="main">
+        <header class="topbar">
+            <div class="page-heading">
+                <div class="breadcrumb">
+                    <a href="dashboard.html"><i class="fa-solid fa-house"></i></a>
+                    <span>/</span>
+                    <span>Myaccount</span>
+                </div>
+                <h3>Myaccount</h3>
+            </div>
+
+            <div class="header-right">
+                <button class="toggle-btn" id="toggleBtn"><i class="fa-solid fa-bars"></i></button>
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" id="searchInput" placeholder="Type here...">
+                </div>
+                <a href="login.html" class="header-link"><i class="fa-solid fa-circle-user"></i> Log out</a>
+                <a href="settings.html" class="header-icon"><i class="fa-solid fa-gear"></i></a>
+                <button class="header-icon"><i class="fa-solid fa-bell"></i></button>
+            </div>
+        </header>
+
+        <div class="content">
+            <section class="top-grid">
+                <div class="bank-card">
+                    <i class="fa-solid fa-wifi wifi"></i>
+                    <div class="card-number">4562&nbsp; 1122&nbsp; 4594&nbsp; 7852</div>
+                    <div class="card-bottom">
+                        <div><span>Card Holder</span><strong>Jack Peterson</strong></div>
+                        <div><span>Expires</span><strong>11/22</strong></div>
+                        <div class="mastercard"><span></span><span></span></div>
+                    </div>
+                </div>
+
+                <div class="card summary-card">
+                    <div class="summary-icon"><i class="fa-solid fa-landmark"></i></div>
+                    <h3>Account Balance</h3>
+                    <p>Payments</p>
+                    <div class="summary-amount">+$2000</div>
+                </div>
+
+                <div class="card summary-card">
+                    <div class="summary-icon"><i class="fa-brands fa-paypal"></i></div>
+                    <h3>Wallet Bank Card</h3>
+                    <p>Payments</p>
+                    <div class="summary-amount">$455.00</div>
+                </div>
+
+                <div class="card invoices">
+                    <div class="section-heading">
+                        <h3>Invoices</h3>
+                        <button class="outline-btn" id="viewInvoices">VIEW ALL</button>
+                    </div>
+
+                    <div class="invoice-list">
+                        <div class="invoice-item">
+                            <div><strong>March, 01, 2020</strong><small>#MS-415646</small></div>
+                            <span>$180</span><button class="pdf-link"><i class="fa-solid fa-file-pdf"></i> PDF</button>
+                        </div>
+                        <div class="invoice-item">
+                            <div><strong>February, 10, 2021</strong><small>#RV-126749</small></div>
+                            <span>$250</span><button class="pdf-link"><i class="fa-solid fa-file-pdf"></i> PDF</button>
+                        </div>
+                        <div class="invoice-item">
+                            <div><strong>April, 05, 2020</strong><small>#QW-103578</small></div>
+                            <span>$120</span><button class="pdf-link"><i class="fa-solid fa-file-pdf"></i> PDF</button>
+                        </div>
+                        <div class="invoice-item">
+                            <div><strong>June, 25, 2019</strong><small>#MS-415646</small></div>
+                            <span>$180</span><button class="pdf-link"><i class="fa-solid fa-file-pdf"></i> PDF</button>
+                        </div>
+                        <div class="invoice-item">
+                            <div><strong>March, 01, 2019</strong><small>#AR-803481</small></div>
+                            <span>$300</span><button class="pdf-link"><i class="fa-solid fa-file-pdf"></i> PDF</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card payment-method">
+                    <div class="section-heading">
+                        <h3>Payment Method</h3>
+                        <button class="primary-btn" id="addCard"><i class="fa-solid fa-plus"></i> ADD NEW CARD</button>
+                    </div>
+
+                    <div class="payment-cards">
+                        <div class="payment-item">
+                            <i class="fa-brands fa-cc-mastercard mastercard-small"></i>
+                            <strong>**** &nbsp; **** &nbsp; **** &nbsp; 7852</strong>
+                            <button class="edit-payment"><i class="fa-solid fa-pen"></i></button>
+                        </div>
+                        <div class="payment-item">
+                            <span class="visa">VISA</span>
+                            <strong>**** &nbsp; **** &nbsp; **** &nbsp; 5248</strong>
+                            <button class="edit-payment"><i class="fa-solid fa-pen"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lower-grid">
+                <div class="card billing">
+                    <h3>Billing Information</h3>
+                    <div class="billing-list">
+                        <div class="billing-item">
+                            <div class="billing-top">
+                                <strong>Oliver Liam</strong>
+                                <div class="billing-actions">
+                                    <button class="delete-btn"><i class="fa-solid fa-trash"></i> DELETE</button>
+                                    <button class="edit-btn"><i class="fa-solid fa-pen"></i> EDIT</button>
+                                </div>
+                            </div>
+                            <div class="billing-details">
+                                <span>Company Name:</span><strong>Viking Burrito</strong>
+                                <span>Email Address:</span><strong>oliver@burrito.com</strong>
+                                <span>VAT Number:</span><strong>FRB1235476</strong>
+                            </div>
+                        </div>
+
+                        <div class="billing-item">
+                            <div class="billing-top">
+                                <strong>Lucas Harper</strong>
+                                <div class="billing-actions">
+                                    <button class="delete-btn"><i class="fa-solid fa-trash"></i> DELETE</button>
+                                    <button class="edit-btn"><i class="fa-solid fa-pen"></i> EDIT</button>
+                                </div>
+                            </div>
+                            <div class="billing-details">
+                                <span>Company Name:</span><strong>Stone Tech Zone</strong>
+                                <span>Email Address:</span><strong>lucas@stone-tech.com</strong>
+                                <span>VAT Number:</span><strong>FRB1235476</strong>
+                            </div>
+                        </div>
+
+                        <div class="billing-item">
+                            <div class="billing-top">
+                                <strong>Ethan James</strong>
+                                <div class="billing-actions">
+                                    <button class="delete-btn"><i class="fa-solid fa-trash"></i> DELETE</button>
+                                    <button class="edit-btn"><i class="fa-solid fa-pen"></i> EDIT</button>
+                                </div>
+                            </div>
+                            <div class="billing-details">
+                                <span>Company Name:</span><strong>Fiber Notion</strong>
+                                <span>Email Address:</span><strong>ethan@fiber.com</strong>
+                                <span>VAT Number:</span><strong>FRB1235476</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card transactions">
+                    <div class="section-heading">
+                        <h3>Your Transaction's</h3>
+                        <span class="date-label"><i class="fa-regular fa-calendar"></i> 23 - 30 March 2020</span>
+                    </div>
+
+                    <p class="transaction-label">NEWEST</p>
+
+                    <div class="transaction-item">
+                        <span class="transaction-icon expense"><i class="fa-solid fa-arrow-down"></i></span>
+                        <div class="transaction-info"><strong>Food</strong><small>27 March 2020, at 12:30 PM</small></div>
+                        <span class="transaction-amount expense-text">- $ 2,500</span>
+                    </div>
+
+                    <div class="transaction-item">
+                        <span class="transaction-icon income"><i class="fa-solid fa-arrow-up"></i></span>
+                        <div class="transaction-info"><strong>Medicine</strong><small>27 March 2020, at 04:30 AM</small></div>
+                        <span class="transaction-amount income-text">+ $ 2,000</span>
+                    </div>
+
+                    <p class="transaction-label">YESTERDAY</p>
+
+                    <div class="transaction-item">
+                        <span class="transaction-icon income"><i class="fa-solid fa-arrow-up"></i></span>
+                        <div class="transaction-info"><strong>Appointment</strong><small>26 March 2020, at 13:45 PM</small></div>
+                        <span class="transaction-amount income-text">+ $ 750</span>
+                    </div>
+
+                    <div class="transaction-item">
+                        <span class="transaction-icon income"><i class="fa-solid fa-arrow-up"></i></span>
+                        <div class="transaction-info"><strong>MarketPlace</strong><small>26 March 2020, at 12:30 PM</small></div>
+                        <span class="transaction-amount income-text">+ $ 1,000</span>
+                    </div>
+
+                    <div class="transaction-item">
+                        <span class="transaction-icon income"><i class="fa-solid fa-arrow-up"></i></span>
+                        <div class="transaction-info"><strong>Pharmacy</strong><small>26 March 2020, at 08:30 AM</small></div>
+                        <span class="transaction-amount income-text">+ $ 2,500</span>
+                    </div>
+
+                    <div class="transaction-item">
+                        <span class="transaction-icon pending"><i class="fa-solid fa-exclamation"></i></span>
+                        <div class="transaction-info"><strong>Bookings</strong><small>26 March 2020, at 05:00 AM</small></div>
+                        <span class="transaction-amount pending-text">Pending</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>© 2026, made with <i class="fa-solid fa-heart"></i> by <a href="https://www.mypihub.com/"><strong>&nbsp;MyPiHUB&nbsp;</strong></a> for a better web.</p>
+            <div class="footer-links">
+                <a href="#">MyPatientHUB</a>
+                <a href="#">About Us</a>
+                <a href="#">Blog</a>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
